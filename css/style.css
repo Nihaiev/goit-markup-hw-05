@@ -55,12 +55,7 @@ ul{
     padding-right: 15px;
     margin: auto;
 }
-/* :active,
-:hover,
-:focus {
-    outline: 0;
-    outline-offset: 0;
-} */
+
 .section{
     padding-top: 94px;
     padding-bottom: 94px;
@@ -130,6 +125,19 @@ ul{
     color: var(--active-color);
 }
 
+.current{
+    position: relative;
+}
+.current::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--active-color);
+    
+}
 
 .link {
     text-decoration: none;
@@ -243,6 +251,50 @@ ul{
 
     }
 
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 528px;
+    min-height: 581px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+}
+.modal-btn{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+    
+}
+
 
 
 /* --FEATURE-- */
@@ -320,8 +372,30 @@ ul{
     display: flex;
 
 }
+.about-item{
+    position: relative;
+}
 .about-item:not(:last-child){
     margin-right: var(--typical-margin) ;
+}
+.about-label{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: rgba(47, 48, 58, 0.8);
+
 }
 
 /* --TEAM */
@@ -579,6 +653,22 @@ ul{
     letter-spacing: 0.03em;
     color: var(--portfolio-text-color);
 }
+.portfolio-description{
+    position: relative;
+    
+}
+.portfolio-description-text{
+    position: absolute;
+    bottom: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background: rgba(33, 150, 243, 0.9);
+}
+
+
 
 /* --FOOTER-- */
 .footer{
