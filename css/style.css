@@ -110,6 +110,7 @@ ul{
     padding-top: 32px;
     padding-bottom: 32px;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-nav:not(:last-child)  {
     margin-right: 50px;
@@ -164,6 +165,7 @@ ul{
     padding-top: 32px;
     padding-bottom: 32px;
     display: flex;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-list:not(:last-child) {
     margin-right: 30px;
@@ -229,6 +231,7 @@ ul{
     border-radius: 4px;
     cursor: pointer;
     border: none;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -261,19 +264,18 @@ ul{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
 .backdrop.is-hidden{
     opacity: 0;
     pointer-events: none;
-    transform: scale(0.5) rotate(-290deg);
+    transform: scale(0.5) rotate(-290deg); 
 }
 .modal{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     min-width: 528px;
     min-height: 581px;
     background: #FFFFFF;
@@ -412,11 +414,6 @@ ul{
 
 }
 
-/* .team-content{
-    background: var(--team-content-color);
-    
-
-} */
 .team-list{
     display: flex;
     
@@ -450,7 +447,6 @@ ul{
 }
 
 .team-img{
-    /* padding-bottom: var(--typical-margin); */
     display: block;
     max-width: 100%;
     height: auto;
@@ -497,6 +493,7 @@ ul{
     border-radius: 50%;
     background-color: var(--team-content-color);
     fill: var(--fillteam-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-soc-link:hover {
     background-color: var(--fillactive-color);
@@ -521,6 +518,7 @@ ul{
 .client-list{
     display: flex;
 }
+
 .client-item:not(:last-child){
     margin-right: 30px;
 }
@@ -535,6 +533,8 @@ ul{
     box-sizing: border-box;
     border-radius: 4px;
     fill: var(--fillteam-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover {
     border: 1px solid #2196F3;
