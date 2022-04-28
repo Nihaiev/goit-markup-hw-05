@@ -699,10 +699,15 @@ ul{
 
 
 }
-.portfolio-overlay:hover .portfolio-description-text {
-    transform: translatex(0);
+.portfolio-link:hover .portfolio-description-text {
+    transform: translatey(0);
     
     
+}
+.portfolio-link:focus .portfolio-description-text {
+    transform: translatey(0);
+
+
 }
 
 
